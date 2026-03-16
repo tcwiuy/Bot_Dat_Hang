@@ -16,6 +16,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/ping")
+def ping():
+    return {"status": "ok", "message": "pong"}
+
 # Chuỗi kết nối Database (Nhớ thay mật khẩu của bạn, database tên là 'datdoan' như trong hình)
 
 # Định nghĩa dữ liệu nhận từ Frontend
